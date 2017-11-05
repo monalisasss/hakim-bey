@@ -20,17 +20,10 @@ lightbox.onclick = function(e){
 };
 
 var btnEbook = document.querySelector('#btnEbook');
-var formEbook = document.querySelector('#formEbook');
 var email = document.querySelector('#email');
 
 btnEbook.onclick = function(e){
     if(email.value.indexOf("@")!=-1){
-
-        formEbook.attr('action',
-                       'mailto:monalisasss@gmail.com?subject=' +
-                       $('#email').val() + '&body=' + 'Manual da Miséria Sustentável' + $('#email').val());
-        formEbook.submit();
-
         $('.ebook .cadastro').addClass("hide");
         $('.ebook .link').removeClass("hide");
     }else{
