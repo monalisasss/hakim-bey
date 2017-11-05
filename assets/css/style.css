@@ -7,6 +7,7 @@
 html, body{
     overflow: auto;
 }
+
 body{
     overflow-x: hidden;
 }
@@ -101,6 +102,10 @@ h4{
     max-width: 90%;
     font-weight: 300;
 }
+form{
+    text-align: center;
+    font-size: 1em;
+}
 
 div{
     display: block;
@@ -143,9 +148,6 @@ button:hover{
     background: -o-linear-gradient(45deg, red, blue); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(45deg, red, blue); /* For Firefox 3.6 to 15 */
     background: linear-gradient(45deg, red, blue); /* Standard syntax */
-}
-form{
-    display: flex;
 }
 
 .fullpage{
@@ -223,6 +225,7 @@ form{
     background: linear-gradient(45deg, red, blue); /* Standard syntax */
 }
 .ebook p {
+    display: inline;
     text-align: center;
 }
 
@@ -478,6 +481,7 @@ a:hover{
     text-align: center;
 
 }
+
 .quiz ul{
     /* centralizar vertical opcoes do quiz */
     display: flex;
@@ -488,6 +492,7 @@ a:hover{
     padding: 0;
     margin-bottom: 60px;
 }
+
 .quiz li{
     cursor: pointer;
     display: inline-block;
@@ -499,44 +504,54 @@ a:hover{
     width: 180px;
     z-index: 0;
 }
+
 .quiz li p{
     font-size: .9em;
     margin:0;
     padding:0;
     display: block;
 }
+
 .quiz li i{
     margin-right: 6px;
     display: inline-block;
 }
+
 .quiz li img{
     border-radius: 3px;
     max-width: 180px;
     height: auto;
 }
+
 ul .unselected {
     opacity: .65;
 }
+
 ul .selected {
     background-color: #cfe3ff;
     border: 1px solid #C7CFFF;
 }
+
 .quiz li i{
     width: 18px;
     height: 18px;
     background: url("../imgs/icon_check_off.gif");
 }
+
 .quiz .selected i{
     background: url("../imgs/icon_check.gif");
 }
+
 .quiz h4{
     margin-bottom: 10px;
     max-width: 100%;
 }
+
 .resultado{
     display: flex;
     justify-content: center;
 }
+
 .resultado div{
     /*display: none;*/
     margin: 0 20px;
@@ -545,6 +560,7 @@ ul .selected {
     background-color: #f4f4f4;
     border: 1px solid #C1C1C1;
 }
+
 .resultado > .show{
     display: block;
 }
@@ -554,6 +570,7 @@ ul .selected {
     border: 1px solid #C1C1C1;
     margin: 0 20px 10px 0;
 }
+
 .resultado p{
     font-size: 1.2em;
     line-height: 1.4em;
@@ -583,6 +600,10 @@ ul .selected {
         font-size: 1.8em;
         font-weight: 300;
     }
+    button, input {
+    /*display: block;*/
+    }
+
     .seta{
         display: none;
     }
@@ -601,9 +622,26 @@ ul .selected {
     }
     .quiz ul{
         margin-bottom:0;
+        padding: 0;
+    }
+    .quiz li{
+    cursor: pointer;
+    display: inline-block;
+    list-style: none;
+    background-color: #f4f4f4;
+    border: 1px solid #C1C1C1;
+    margin: 5px;
+    padding: 10px;
+    width: 140px;
+    z-index: 0;
+    }
+    .quiz li img{
+    border-radius: 3px;
+    max-width: 140px;
+    height: auto;
     }
     .resultado img{
-        width: 130px;
+        width: 140px;
         height: auto;
         margin: 0 10px 5px 0;
     }
@@ -625,6 +663,10 @@ ul .selected {
 
     .lightbox.visible {
         display:block;
+    }
+
+    .ebook p {
+    display: none;
     }
 
 }
