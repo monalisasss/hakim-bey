@@ -455,12 +455,12 @@ a:hover{
 /* QUIZ */
 
 .header_quiz{
+
     background: #000 url("../imgs/bg_marx.gif") fixed;
     background-size: auto auto;
     color: #FFF;
-    min-height: 300px;
+    min-height: 350px;
     padding-top: 50px;
-    padding-bottom: 30px;
 }
 
 .quiz {
