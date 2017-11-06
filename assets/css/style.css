@@ -237,6 +237,16 @@ button:hover{
     background: #000 url("../imgs/bg_today.gif") fixed center;
     color: #FFF;
 }
+.abertura a{
+    color: #f3fe00;
+    background-color: #000000;
+    text-decoration: underline; 
+}
+.abertura a:hover{
+    text-decoration: underline; 
+    color: #000;
+    background-color: #f3fe00;
+}
 
 .cor_degrade{
     color: #FFF;
