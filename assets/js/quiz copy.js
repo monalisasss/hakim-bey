@@ -61,26 +61,19 @@ function resultado(){
 
 }
 
-// $(".btnRefazerQuiz").click(function() {
-// 	btnRefazerQuiz();
-// });
-
-// function btnRefazerQuiz(){
-// 	preenchidas = 0;
-// 	$(".quiz ul li").siblings().removeClass("selected");
-// 	$(".quiz ul li").siblings().removeClass("unselected");
-// 	$(".btnResultado").removeClass("hide");
-// 	divResultado.addClass("hide");
-// }
-
-$(document).ready(function()
-{
-    $.getScript("http://connect.facebook.net/en_US/all.js#xfbml=1", function () {
-        FB.init({ appId: '1877133342301417', status: true, cookie: true, xfbml: true });
-    });
+$(".btnRefazerQuiz").click(function() {
+	btnRefazerQuiz();
 });
 
-$("#shareBtn").click(function() {
+function btnRefazerQuiz(){
+	preenchidas = 0;
+	$(".quiz ul li").siblings().removeClass("selected");
+	$(".quiz ul li").siblings().removeClass("unselected");
+	$(".btnResultado").removeClass("hide");
+	divResultado.addClass("hide");
+}
+
+document.getElementById('shareBtn').onclick = function() {
 
     FB.ui({
         display: 'popup',
@@ -88,7 +81,7 @@ $("#shareBtn").click(function() {
         title: 'Eu tirei ' + titResultado + '! E você?',
         description: 'Qual a ideologia dos seus memes? O que será que seu gosto popular diz sobre seu pensamento ideológico?',
     link: 'https://monalisasss.github.io/hakim-bey/quiz.html',
-    picture: imgResultado,
+    picture: 'imgResultado',
     href: 'https://monalisasss.github.io/hakim-bey/',
 
   },
@@ -99,6 +92,4 @@ function(response) {
     } else {
       alert('Error while posting.');
     }
-    });
 });
-
