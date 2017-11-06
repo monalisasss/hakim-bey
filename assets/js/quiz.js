@@ -1,5 +1,7 @@
 var preenchidas;
 var divResultado;
+var titResultado;
+var imgResultado;
 
 $( ".quiz ul li" ).click(function() {
     $(this).removeClass("unselected");
@@ -31,23 +33,26 @@ function resultado(){
 
   if(preenchidas==5){
     	if ((n1 >= n2)&&(n1 >= n3)&&(n1 >= n4)) {
-      	msg = "Niilismo";
-  		  divResultado = $(".resultado .a");
-    	}
-    	if ((n2 > n1)&&(n2 >= n3)&&(n2 >= n4)) {
-      	msg = "Capitalismo";
-      	divResultado = $(".resultado .b");
-    	}
-    	if ((n3 > n1)&&(n3 > n2)&&(n3 >= n4)) {
-      	msg = "Marxismo";
-  			divResultado = $(".resultado .c");
-    	}
+      	titResultado = "Niilismo";
+        imgResultado = 'https://monalisasss.github.io/hakim-bey/assets/imgs/quiz_r1.jpg';
+        divResultado = $(".resultado .a");
+      }
+      if ((n2 > n1)&&(n2 >= n3)&&(n2 >= n4)) {
+        titResultado = "Capitalismo";
+        imgResultado = 'https://monalisasss.github.io/hakim-bey/assets/imgs/quiz_r2.jpg';
+        divResultado = $(".resultado .b");
+      }
+      if ((n3 > n1)&&(n3 > n2)&&(n3 >= n4)) {
+        titResultado = "Marxismo";
+        imgResultado = 'https://monalisasss.github.io/hakim-bey/assets/imgs/quiz_r3.jpg';
+        divResultado = $(".resultado .c");
+      }
       if ((n4 > n1)&&(n4 > n2)&&(n4 > n3)) {
-      	msg = "Anarquismo";
+        titResultado = "Anarquismo";
+        imgResultado = 'https://monalisasss.github.io/hakim-bey/assets/imgs/quiz_r4.jpg';
   			divResultado = $(".resultado .d");
     	}
 
-    	console.log(msg);
       divResultado.removeClass("hide");
       $(".btnResultado").addClass("hide");
   } else{
@@ -67,3 +72,16 @@ function btnRefazerQuiz(){
 	$(".btnResultado").removeClass("hide");
 	divResultado.addClass("hide");
 }
+
+document.getElementById('shareBtn').onclick = function() {
+
+    FB.ui({
+        display: 'popup',
+        method: 'share',
+        title: 'Eu tirei ' + titResultado + '! E você?',
+        description: 'Qual a ideologia dos seus memes? O que será que seu gosto popular diz sobre seu pensamento ideológico?',
+    link: 'https://monalisasss.github.io/hakim-bey/quiz.html',
+    picture: imgResultado,
+    href: 'https://monalisasss.github.io/hakim-bey/',
+
+  }, function(response){});
