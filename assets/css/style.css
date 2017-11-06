@@ -31,7 +31,7 @@ nav ul{
 
 nav ul li{
     text-transform: uppercase;
-    padding: 30px 0;
+    padding: 25px 0;
 }
 
 nav ul li p{
@@ -41,13 +41,14 @@ nav ul li p{
 
 nav ul li a{
     font-family: "Comic Sans MS", cursive, sans-serif;
-    border-radius: 50px;
-    padding: 20px 25px;
-    margin-right: 10px;
+    border-radius: 100px;
+    padding: 15px 20px;
+    margin-right: 5px;
     cursor: pointer;
     background-color: blue;
     color: #FFF;
     text-decoration: none;
+    font-size: .9em;
 }
 
 nav ul li a:hover{
@@ -595,6 +596,9 @@ ul .selected {
     nav ul li p{
         display: none;
     }
+    nav ul li a{
+        padding: 20px 25px;
+    }
     section{
     }
     h1{
@@ -629,11 +633,14 @@ ul .selected {
         margin: 10px 0;
     }
     .quiz{
-        padding:0;
+        padding:20px 0;
     }
     .quiz ul{
         margin-bottom:0;
         padding: 0;
+    }
+    .quiz ul:last-of-type{
+        margin-bottom:60px;
     }
     .quiz li{
     cursor: pointer;
@@ -651,6 +658,7 @@ ul .selected {
     max-width: 140px;
     height: auto;
     }
+
     .resultado img{
         width: 140px;
         height: auto;

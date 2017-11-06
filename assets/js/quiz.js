@@ -12,7 +12,6 @@ $( ".quiz ul li" ).click(function() {
   	if ($(".selected").length == $(".pergunta").length){
   		console.log("Escolheu todas as opções");
   		resultado();
-			window.location.href='#resultado';
   	}
 });
 
@@ -20,6 +19,13 @@ $(".btnResultado").click(function() {
 	resultado();
 });
 
+// $(document).on('click', 'a[href^="#"]', function (event) {
+//     event.preventDefault();
+
+//     $('html, body').animate({
+//         scrollTop: $($.attr(this, 'href')).offset().top
+//     }, 500);
+// });
 
 function resultado(){
 	
@@ -55,23 +61,35 @@ function resultado(){
 
       divResultado.removeClass("hide");
       $(".btnResultado").addClass("hide");
+
+        $('html, body').animate({
+          scrollTop: $("#resultado").offset().top-30
+        }, 500);
+
   } else{
     alert("Por favor preencha todas as respostas.")
   }
 
 }
 
-// $(".btnRefazerQuiz").click(function() {
-// 	btnRefazerQuiz();
-// });
+$(".btnRefazerQuiz").click(function() {
+	btnRefazerQuiz();
+});
 
-// function btnRefazerQuiz(){
-// 	preenchidas = 0;
-// 	$(".quiz ul li").siblings().removeClass("selected");
-// 	$(".quiz ul li").siblings().removeClass("unselected");
-// 	$(".btnResultado").removeClass("hide");
-// 	divResultado.addClass("hide");
-// }
+function btnRefazerQuiz(){
+  $('html, body').animate({
+        scrollTop: $("#quiz").offset().top-30
+  }, 500);
+
+	preenchidas = 0;
+	$(".quiz ul li").siblings().removeClass("selected");
+	$(".quiz ul li").siblings().removeClass("unselected");
+	$(".btnResultado").removeClass("hide");
+	divResultado.addClass("hide");
+}
+
+
+
 
 $(document).ready(function()
 {
@@ -95,8 +113,6 @@ $(".facebook").click(function() {
          'og:image': imgResultado,
     }
   })
-
-
     // console.log("COMPARTILHAR FB");
     // FB.ui({
     //     display: 'popup',
