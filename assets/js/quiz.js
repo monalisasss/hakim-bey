@@ -81,7 +81,7 @@ $(document).ready(function()
 });
 
 $("#shareBtn").click(function() {
-
+    console.log("COMPARTILHAR FB");
     FB.ui({
         display: 'popup',
         method: 'share',
