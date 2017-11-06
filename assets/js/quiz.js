@@ -75,7 +75,7 @@ function resultado(){
 
 $(document).ready(function()
 {
-    $.getScript("http://connect.facebook.net/en_US/all.js#xfbml=1", function () {
+    $.getScript("https://connect.facebook.net/en_US/all.js#xfbml=1", function () {
         FB.init({ appId: '1877133342301417', status: true, cookie: true, xfbml: true });
     });
 });
