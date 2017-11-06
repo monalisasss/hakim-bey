@@ -78,7 +78,7 @@ $(".btnRefazerQuiz").click(function() {
 
 function btnRefazerQuiz(){
   $('html, body').animate({
-        scrollTop: $("#quiz").offset().top-30
+        scrollTop: $("#quiz").offset().top-20
   }, 500);
 
 	preenchidas = 0;
