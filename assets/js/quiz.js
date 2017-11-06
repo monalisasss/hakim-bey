@@ -80,7 +80,7 @@ $(document).ready(function()
     });
 });
 
-$("#shareBtn").click(function() {
+$(".facebook").click(function() {
     console.log("COMPARTILHAR FB");
     FB.ui({
         display: 'popup',
