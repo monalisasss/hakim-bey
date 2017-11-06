@@ -81,15 +81,31 @@ $(document).ready(function()
 });
 
 $(".facebook").click(function() {
-    console.log("COMPARTILHAR FB");
+
+
     FB.ui({
-        display: 'popup',
-        method: 'share',
-        title: 'Eu tirei ' + titResultado + '! E você?',
-        description: 'Qual a ideologia dos seus memes? O que será que seu gosto popular diz sobre seu pensamento ideológico?',
-    link: 'https://monalisasss.github.io/hakim-bey/quiz.html',
-    picture: imgResultado,
-    href: 'https://monalisasss.github.io/hakim-bey/',
+    method: 'share_open_graph',
+    action_type: 'matchadviceuk:share',
+    action_properties: JSON.stringify({
+      'quiz': {
+         'og:type': 'matchadviceuk:quiz',
+         'og:url': 'https://monalisasss.github.io/hakim-bey/quiz.html',
+         'og:title': 'Eu tirei "+titResultado+"! Qual a ideologia dos seus memes?',
+         'og:description': 'O que será que seu gosto popular diz sobre seu pensamento ideológico?',
+         'og:image': imgResultado,
+    }
+  })
+
+
+    // console.log("COMPARTILHAR FB");
+    // FB.ui({
+    //     display: 'popup',
+    //     method: 'share',
+    //     title: 'Eu tirei ' + titResultado + '! E você?',
+    //     description: 'Qual a ideologia dos seus memes? O que será que seu gosto popular diz sobre seu pensamento ideológico?',
+    // link: 'https://monalisasss.github.io/hakim-bey/quiz.html',
+    // picture: imgResultado,
+    // href: 'https://monalisasss.github.io/hakim-bey/',
 
   },
 
