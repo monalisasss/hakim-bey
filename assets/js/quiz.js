@@ -1,7 +1,7 @@
 var preenchidas;
 var divResultado;
-var titResultado;
-var imgResultado;
+var titResultado = '';
+var imgResultado = '';
 
 $( ".quiz ul li" ).click(function() {
     $(this).removeClass("unselected");
