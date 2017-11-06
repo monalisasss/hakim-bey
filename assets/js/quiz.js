@@ -73,7 +73,7 @@ function btnRefazerQuiz(){
 	divResultado.addClass("hide");
 }
 
-document.getElementById('shareBtn').onclick = function() {
+$("#shareBtn").onclick = function() {
 
     FB.ui({
         display: 'popup',
